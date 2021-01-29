@@ -2,7 +2,7 @@ import 'package:culinary/culinary_colors.dart';
 import 'package:culinary/models/products.dart';
 import 'package:culinary/notifiers/cart_notifier.dart';
 import 'package:culinary/services/product_service.dart';
-import 'package:culinary/views/product_list.dart';
+import 'package:culinary/views/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: white,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: ProductList(),
+        home: ProductPage(),
       ),
     );
   }

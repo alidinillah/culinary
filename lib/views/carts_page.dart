@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:culinary/views/cart_item.dart';
 
-class CartPage extends StatelessWidget {
+class CartsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   var now = DateTime.now();
@@ -19,11 +19,21 @@ class CartPage extends StatelessWidget {
           return EmptyState();
         return Scaffold(
           backgroundColor: Colors.white,
-          appBar: AppBar(
-            elevation: 1.0,
-            title: Text("Review Pesanan"),
-          ),
-          body: ListView(
+          body: NestedScrollView(
+            headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+              return <Widget>[
+                SliverAppBar(
+                  titleSpacing: NavigationToolbar.kMiddleSpacing,
+                  elevation: 1.0,
+                  expandedHeight: 100.0,
+                  floating: false,
+                  pinned: true,
+                  flexibleSpace: FlexibleSpaceBar(
+                    title: Text("Review Pesanan")),
+                )
+              ];
+            },
+            body: ListView(
             padding: EdgeInsets.all(16.0),
             children: [
               Expanded(
@@ -111,6 +121,7 @@ class CartPage extends StatelessWidget {
               )
             ],
           ),
+        ),
           floatingActionButton: Container(
             width: 380,
             height: 52,

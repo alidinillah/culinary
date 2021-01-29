@@ -1,8 +1,8 @@
 import 'package:culinary/notifiers/cart_notifier.dart';
+import 'package:culinary/views/carts_page.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:culinary/views/cart_page.dart';
 
 class FabCart extends StatelessWidget {
   @override
@@ -35,10 +35,9 @@ class FabCart extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (ctx) => CartPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (ctx) => CartsPage()));
                   }),
         );
-
       });
   }
 }

@@ -34,7 +34,7 @@ class CartItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(product.name, maxLines: 2, style: TextStyle(fontSize: 16, color: CulinaryColors.title, fontWeight: FontWeight.bold)),
-                          Icon(Icons.delete, color: CulinaryColors.subtext, size: 20)
+                          InkWell(child: Icon(Icons.delete, color: CulinaryColors.subtext, size: 20))
                         ],
                       ),
                       SizedBox(height: 8),
