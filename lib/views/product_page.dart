@@ -17,22 +17,6 @@ class ProductPage extends StatelessWidget {
   String date = formatter.format(now);
     return Scaffold(
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   title: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: [
-      //       Row(
-      //         children: [
-      //           Text("Alamat Pengantaran", style: TextStyle(fontSize: 14, color: CulinaryColors.subtext),),
-      //           Icon(Icons.keyboard_arrow_down_rounded, color: CulinaryColors.orange, size: 18),
-      //         ],
-      //       ),
-      //       Text("Kulina"),
-      //     ],
-      //   ),
-      //   elevation: 0,
-      //   leading: Icon(Icons.arrow_back),
-      // ),
       body: Padding(
         padding: const EdgeInsets.only(top: 50.0),
         child: NestedScrollView(
