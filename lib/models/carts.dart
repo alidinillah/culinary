@@ -22,15 +22,6 @@ class Cart {
         Expanded(
           child: Text(product.name),
         ),
-        // Padding(
-        //   padding: const EdgeInsets.only(left: 13.0),
-        //   child: Text(
-        //     // MoneyConfig.get(
-        //     //   product.getPrice(quantity) * quantity,
-        //     // ),
-        //     textAlign: TextAlign.right,
-        //   ),
-        // ),
       ],
     );
   }

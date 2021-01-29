@@ -48,27 +48,6 @@ class CartItem extends StatelessWidget {
                           ),
                           SizedBox(width: 40),
                           Expanded(child: ProductItemButton(product))
-                          // Consumer<CartNotifier>(
-                          //   builder: (_, cn, __) {
-                          //       return Container(
-                          //         child: Row(
-                          //           children: [
-                          //             InkWell(
-                          //               child: Icon(Icons.remove),
-                          //               onTap: null,
-                          //             ),
-                          //             InkWell(
-                          //               child: Text(cn.quantity(product).toString()),
-                          //             ),
-                          //             InkWell(
-                          //               child: Icon(Icons.add),
-                          //               onTap: cn.addProduct(product)
-                          //             ),
-                          //           ],
-                          //         ),
-                          //       );
-                          //   }
-                          // )
                         ],
                       ),
                     ],

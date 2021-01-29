@@ -36,15 +36,6 @@ class FabCart extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (ctx) => CartPage()));
-                    // if (user == null || !user.login) {
-                    //   Navigator.popUntil(context, ModalRoute.withName('/'));
-                    //   notifier.status = AuthStatus.Authenticating;
-                    // } else {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (ctx) => CheckoutGrosir()),
-                    //   );
-                    // }
                   }),
         );
 

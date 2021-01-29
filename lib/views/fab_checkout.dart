@@ -41,15 +41,6 @@ class FabCheckout extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.pop(context);
-                    // if (user == null || !user.login) {
-                    //   Navigator.popUntil(context, ModalRoute.withName('/'));
-                    //   notifier.status = AuthStatus.Authenticating;
-                    // } else {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(builder: (ctx) => CheckoutGrosir()),
-                    //   );
-                    // }
                   }),
         );
 

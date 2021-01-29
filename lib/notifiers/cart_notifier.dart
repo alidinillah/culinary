@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class CartNotifier extends ChangeNotifier {
   List<Cart> carts = List<Cart>();
-  // CartNotifier() : carts = [];
   bool found = false;
   
 
@@ -16,19 +15,6 @@ class CartNotifier extends ChangeNotifier {
     carts.add(c);
     notifyListeners();
   }
-
-  // addProduct(Product product) {
-  //   for(int i = 0; i >= carts.length; i++) {
-  //     Cart c = carts[i];
-  //     if (c.product.id == product.id) {
-  //       c.quantity = ++c.quantity;
-  //       found = true;
-  //       break;
-  //     } 
-  //   }
-  //   if(!found) carts.add(Cart(product, 1));
-  //   notifyListeners();
-  // }
 
   remove(Product product) {
     for (int i = 0; i < carts.length; i++) {
@@ -53,20 +39,6 @@ class CartNotifier extends ChangeNotifier {
   }
 
   int get total => carts != null ? carts.length : 0;
-
-  // addExpired(Cart selectedCp) {
-  //   CartQuantity cq = CartQuantity(DateTime.now().millisecondsSinceEpoch, null, 0);
-  //   selectedCp.cartQuantities.add(cq);
-  //   notifyListeners();
-  // }
-
-  // removeExpired(CartQuantity expiredQuantity) {
-  //   for (int i = 0; i < carts.length; i++) {
-  //     Cart e = carts[i];
-  //       e.cartQuantities.removeAt(i);
-  //   }
-  //   notifyListeners();
-  // }
 
   Cart getCart (Product product) {
     Cart c;
@@ -152,14 +124,14 @@ class Cart {
 
 class CartQuantity {
   int id;
-  DateTime expired;
+  DateTime date;
   int quantity;
-  CartQuantity(this.id, this.expired, this.quantity);
+  CartQuantity(this.id, this.date, this.quantity);
 
   factory CartQuantity.fromMap(Map<String, dynamic> map) => 
     CartQuantity(
       map["id"],
-      DateTime.parse(map["expired"]),
+      DateTime.parse(map["date"]),
       map["quantity"],
     );
 }
